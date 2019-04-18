@@ -1,0 +1,17 @@
+---
+version: '2.0'
+
+services:
+  testssl: &defaults
+    image: quay.io/jumanjiman/testssl:2.9.5-20171211T0151-git-4151702
+    command: "--help"
+    stdin_open: true
+    tty: true
+    read_only: true
+    mem_limit: 100M
+#    pids_limit: 100
+    cpu_shares: 512
+    cap_drop:
+      - all
+    volumes:
+      - /tmp:/var/log
