@@ -51,6 +51,9 @@ file in this git repo:
     # Do a limited scan with a subset of options against one host.
     docker-compose run testssl --heartbleed --ip one https://www.google.com/
 
+    # Do a full scan with json output against one host.
+    docker-compose run testssl --jsonfile="/var/log/scan_google.json" --ip one https://www.google.com/
+
 
 You can also run the image with the `docker` command directly:
 
